@@ -2,3 +2,12 @@ version: '3'
 services:
   back:
     image: sagby/tp-docker
+    ports:
+      - "8080:8080"
+    environment:
+      - ENVIRONMENT=Salut depuis le docker-compose
+
+  front:
+    image: sagby/tp-docker-front
+    ports:
+      - "80:80"
