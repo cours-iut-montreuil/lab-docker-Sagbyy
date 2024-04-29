@@ -1,0 +1,3 @@
+docker stop container-tp-docker-front container-tp-docker
+docker rm container-tp-docker-front container-tp-docker
+docker image rm tp-docker-front sagby/tp-docker-front sagby/tp-docker
