@@ -1,0 +1,2 @@
+docker exec -it container-tp-docker bash
+cat logs/my-messages.log
