@@ -1,0 +1,3 @@
+docker exec -it container-tp-docker bash
+
+OS: Debian GNU/Linux 12 (bookworm)

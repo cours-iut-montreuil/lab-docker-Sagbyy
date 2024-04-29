@@ -1,0 +1,4 @@
+L'adresse ne répond pas car elle renvoie l'API sur le port 8080 du conteneur et non sur la machine hôte.
+
+docker rm container-tp-docker
+docker run --name container-tp-docker -it -p 8080:8080 tp-docker
