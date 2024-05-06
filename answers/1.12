@@ -1,1 +1,2 @@
+docker run --name container-tp-docker -p 8080:8080 -e ENVIRONMENT=Salah -d sagby/tp-docker
 docker run --name container-tp-docker-front -p 80:80 -it -d sagby/tp-docker-front
