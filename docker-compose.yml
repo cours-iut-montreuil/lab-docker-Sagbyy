@@ -6,6 +6,8 @@ services:
       - "8080:8080"
     environment:
       - ENVIRONMENT=Salut depuis le docker-compose
+    # volumes:
+    #   - ./logs:/app/logs
 
   front:
     image: sagby/tp-docker-front
