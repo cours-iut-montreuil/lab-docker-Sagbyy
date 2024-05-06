@@ -1,7 +1,6 @@
 name: Autograding Tests
 'on':
 - push
-- workflow_dispatch
 - repository_dispatch
 permissions:
   checks: write
@@ -16,7 +15,7 @@ jobs:
       uses: actions/checkout@v4
     - name: t1.4
       id: t1-4
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1.4
         setup-command: ''
@@ -26,7 +25,7 @@ jobs:
         max-score: 10
     - name: t1.5
       id: t1-5
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1.5
         setup-command: ''
@@ -36,17 +35,17 @@ jobs:
         max-score: 10
     - name: t1.6
       id: t1-6
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1.6
         setup-command: ''
-        command: grep -q -i -E 'docker.*push.*[[:ascii:]]+/[[:ascii:]]+:[[:ascii:]]+'
+        command: grep -q -i -E 'docker.*push.*[[:ascii:]]+\/[[:ascii:]]+:[[:ascii:]]+'
           answers/1.6
         timeout: 10
         max-score: 10
     - name: t1.7
       id: t1-7
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1.7
         setup-command: ''
@@ -55,7 +54,7 @@ jobs:
         max-score: 10
     - name: t1.8
       id: t1-8
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1.8
         setup-command: ''
@@ -64,7 +63,7 @@ jobs:
         max-score: 10
     - name: t1.9.1
       id: t1-9-1
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1.9.1
         setup-command: ''
@@ -72,7 +71,7 @@ jobs:
         timeout: 10
     - name: t1.9.2
       id: t1-9-2
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1.9.2
         setup-command: ''
@@ -82,7 +81,7 @@ jobs:
         max-score: 10
     - name: t1.10
       id: t1-10
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1.10
         setup-command: ''
@@ -92,7 +91,7 @@ jobs:
         max-score: 10
     - name: t1.12
       id: t1-12
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1.12
         setup-command: ''
@@ -102,7 +101,7 @@ jobs:
         max-score: 10
     - name: t1.14
       id: t1-14
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t1.14
         setup-command: ''
@@ -111,7 +110,7 @@ jobs:
         max-score: 10
     - name: t2.1
       id: t2-1
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t2.1
         setup-command: ''
@@ -120,7 +119,7 @@ jobs:
         max-score: 10
     - name: t2.6.1
       id: t2-6-1
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t2.6.1
         setup-command: ''
@@ -129,7 +128,7 @@ jobs:
         max-score: 10
     - name: t2.6.2
       id: t2-6-2
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t2.6.2
         setup-command: ''
@@ -138,7 +137,7 @@ jobs:
         max-score: 10
     - name: t2.8
       id: t2-8
-      uses: education/autograding-command-grader@v1
+      uses: classroom-resources/autograding-command-grader@v1
       with:
         test-name: t2.8
         setup-command: ''
@@ -146,7 +145,7 @@ jobs:
         timeout: 10
         max-score: 10
     - name: Autograding Reporter
-      uses: education/autograding-grading-reporter@v1
+      uses: classroom-resources/autograding-grading-reporter@v1
       env:
         T1-4_RESULTS: "${{steps.t1-4.outputs.result}}"
         T1-5_RESULTS: "${{steps.t1-5.outputs.result}}"
