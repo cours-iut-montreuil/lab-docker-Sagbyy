@@ -39,7 +39,7 @@ jobs:
       with:
         test-name: t1.6
         setup-command: ''
-        command: grep -q -i -E 'docker.*push.*[[:ascii:]]+\/[[:ascii:]]+:[[:ascii:]]+'
+        command: grep -q -i -E 'docker.*push.*[[:alnum:]]+/[[:alnum:]]+:[[:alnum:]]+'
           answers/1.6
         timeout: 10
         max-score: 10
